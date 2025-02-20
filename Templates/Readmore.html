@@ -1,0 +1,269 @@
+{% include 'header.html' %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Readmore</title>
+
+<style>
+   .category-container {
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.category-item {
+    position: relative; /* Ensure positioning context */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    width: 100%; /* Ensure the item takes full width */
+}
+
+.category-item img {
+    object-fit: cover;
+    width: 100%; /* Make the image take full width */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.category-item .more {
+    position: absolute;
+    bottom: 10px; /* Adjust as per your design */
+    left: 20px; /* Align to the left */
+    font-size: 35px;
+    font-weight: bold;
+    color: #e3fdf8; /* Text color */
+    padding: 5px 10px; /* Padding for text */
+}
+
+@media (max-width: 768px) {
+    .category-item img {
+        height: auto; /* Adjust height to be responsive */
+    }
+
+    .category-item .more {
+        font-size: 25px; /* Adjust font size for smaller screens */
+        bottom: 20px; /* Adjust position for smaller screens */
+        left: 10px; /* Adjust position for smaller screens */
+    }
+}
+
+/*  */
+
+/*  */
+main {
+            text-align: center;
+        }
+        .services-heading {
+            position: relative; 
+            display: inline-block; 
+            margin-bottom: 20px;
+        }
+        .services-heading::before,
+        .services-heading::after {
+            content: "";
+            position: absolute;
+            top: 50%; 
+            width: 50px; 
+            height: 2px; 
+            background-color:rgb(9, 9, 206); 
+            transform: translateY(-50%); 
+        }
+        .services-heading::before {
+            left: -60px; 
+        }
+        .services-heading::after {
+            right: -60px; 
+        }
+        .services-heading h2 {
+            font-size: 15px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: 200;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+     .product-card {
+    border-radius: 5px;
+    width: 340px;
+    margin: 15px;
+    text-align: center;
+    padding: 25px;
+    border: 1px solid rgb(190, 187, 187);
+    border-radius: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    cursor: pointer; /* Add cursor pointer */
+}
+.product-card img {
+    width: 80px;
+    height: 70px;
+    object-fit: contain;
+    background-color: rgb(5, 163, 163);
+    border-radius: 50%;
+}
+.product-card:hover {
+    background-color: #76D7C4  ;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 1; 
+}
+
+.product-card:hover h3,
+.product-card:hover p {
+    color: #fff; 
+}
+
+
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-card p {
+    color: #424141;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+    font-size: 15px;
+    
+}
+.product-card h3{
+    font-weight: 500;
+}
+.product-card .read_more {
+    color: rgb(44, 44, 44);
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+
+.about-us h1 {
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* .about-us p {
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 300;
+} */
+.about-us p {
+    margin-bottom: 15px;
+    color: rgb(78, 77, 77);
+   font-size: 17px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+
+.about-us .btn-primary {
+    margin-top: 20px;
+    background-color: #45B39D;
+    border: none;
+    color: black;
+}
+
+.row img{
+    border-radius: 20px;
+    /* height: 600px; */
+    object-fit: contain;
+    border: 1px solid rgb(221, 218, 218);
+}
+
+.category-item .more {
+    position: absolute;
+    bottom: 10px; /* Adjust as per your design */
+    left: 200px; /* Align to the left */
+    bottom: 110px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #e3fdf8; /* Text color */
+    padding: 5px 10px; /* Padding for text */
+}
+/*  */
+</style>
+
+<div class="category-container">
+    <div class="category-item">
+        <img src="https://www.svalgo.com/img/banner1.jpg" alt="Banner Image">
+        <div class="more">About Us
+            <span class="more_lan"></span>
+        </div>
+    </div>
+</div>
+
+
+<!--  -->
+
+
+<section class="about-us">
+    <div class="container">
+     
+        <h1 style="font-weight: 500; margin-top: 40px;">{{ service.title }}</h1>
+        <div class="row">
+       
+            <div class="col-md-6">
+                <img src="{{ service.img2.url }}" alt="About Us Image" class="img-fluid">
+       
+            </div>
+            <div class="col-md-6">
+                <p>{{ service.description }}</p>
+                  
+                <a href="/Contact-Us/" class="btn btn-primary" style="margin-top: 20px; background-color: blue; border: none; color: #fff; padding: 10px 40px;">More About Us</a>
+            </div>
+        </div>
+     
+    </div>
+    
+</section>
+<br>
+<br>
+<!--  -->
+      
+<main>
+    <div class="services-heading">
+        <h2>SERVICES</h2>
+    </div>
+    <h2 style="font-weight: 900;">Our Services</h2>
+    <div class="product-grid">
+        {% for service in Service %}
+        <div class="product-card">
+         
+            <img src="{{ service.img1.url }}" alt="">
+            <h3 class="title">{{ service.title }}</h3>
+            <p class="sub_title">{{ service.paragraph }}</p>
+            <a href="{% url 'read_more' service.id %}" class="read_more">Read More <i class="fas fa-arrow-right" style="color: black;"></i></a>
+
+        </div>
+        {% endfor %}
+       
+    </div>
+</main>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+      {% include 'footer.html' %}

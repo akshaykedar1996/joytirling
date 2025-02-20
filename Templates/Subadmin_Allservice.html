@@ -1,0 +1,140 @@
+
+<style>
+    
+/*  */
+main {
+            text-align: center;
+        }
+        .services-heading {
+            position: relative; 
+            display: inline-block; 
+            margin-bottom: 20px;
+        }
+        .services-heading::before,
+        .services-heading::after {
+            content: "";
+            position: absolute;
+            top: 50%; 
+            width: 50px; 
+            height: 2px; 
+            background-color:rgb(9, 9, 206); 
+            transform: translateY(-50%); 
+        }
+        .services-heading::before {
+            left: -60px; 
+        }
+        .services-heading::after {
+            right: -60px; 
+        }
+        .services-heading h2 {
+            font-size: 15px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        /*  */
+        body {
+    font-family: Arial, sans-serif;
+}
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: 200;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+     .product-card {
+    border-radius: 5px;
+    width: 340px;
+    margin: 15px;
+    text-align: center;
+    padding: 25px;
+    border: 1px solid rgb(190, 187, 187);
+    border-radius: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    cursor: pointer; /* Add cursor pointer */
+}
+.product-card img {
+    width: 80px;
+    height: 70px;
+    object-fit: contain;
+    background-color: rgb(5, 163, 163);
+    border-radius: 50%;
+}
+.product-card:hover {
+    background-color: #76D7C4  ;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 1; 
+}
+
+.product-card:hover h3,
+.product-card:hover p {
+    color: #fff; 
+}
+
+
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-card p {
+    color: #424141;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+    font-size: 15px;
+    
+}
+.product-card h3{
+    font-weight: 500;
+}
+.product-card .read_more {
+    color: rgb(44, 44, 44);
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 40px;
+}
+</style>  
+  
+<!-- Template for displaying services -->
+<main>
+    <div class="services-heading">
+      
+        <h2 style="margin-top: 30px;">SERVICES</h2>
+    </div>
+    <h2 style="font-weight: 900;">Our Services</h2>
+    <div class="product-grid">
+        {% for service in all_service %}
+        <div class="product-card">
+            {% if service.img1.url %}
+            <img src="{{ service.img1.url }}" alt="">
+            {% endif %}
+            <h3 class="title">{{ service.title }}</h3>
+            <p class="sub_title">{{ service.paragraph }}</p>
+            <a href="/Subadmin_panel/Edit_service/?idd={{ service.id }}" class="edit_service" style="color: black; font-weight: bold;">Edit Service<i class="fas fa-edit" style="color: black;"></i></a>
+            <!-- <span style="margin-left: 10px;"><a href="" class="read_more">Read More <i class="fas fa-arrow-right" style="color: black;"></i></a></span> -->
+        </div>
+        {% endfor %}
+    </div>
+</main>
+

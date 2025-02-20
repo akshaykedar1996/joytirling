@@ -1,0 +1,297 @@
+{% include 'header.html' %}
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  -->
+    <link rel="stylesheet" href="styles.css">
+    <title>About us</title>
+<style>
+    
+.about-us {
+    padding: 50px 0;
+}
+.about-us p{
+    /* color: black; */
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.about-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-us img {
+    width: 100%;
+    border-radius: 5px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*  */
+.services-heading h5{
+    text-align: center;
+    margin-top: 20px;
+}
+/*  */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b2a41;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.testimonials-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgb(4, 4, 65);
+}
+
+.testimonials-section h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-weight: 800;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.testimonials-wrapper {
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.testimonials-container {
+    display: flex;
+    animation: scroll 8s linear infinite; /* Even faster scrolling */
+}
+
+.testimonial-card {
+    flex: 0 0 33.3333%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: stretch; 
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex: 0 0 50%; /* Adjust for 2 cards per row */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-card {
+        flex: 0 0 100%; /* Single card per row on smaller screens */
+        margin: 10px 0;
+    }
+}
+.testimonial-content {
+    background-color: #e3fdf8;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(107, 106, 106, 0.2), 
+                0 10px 30px rgba(247, 243, 243, 0.2), 
+                0 10px 40px rgba(87, 86, 86, 0.2), 
+                0 10px 50px rgba(53, 52, 52, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is evenly distributed */
+    height: 400px; /* Increased height */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: calc(50% - 20px); /* Adjust for 2 cards per row */
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-card {
+        width: 100%; /* Single card per row on smaller screens */
+    }
+}
+.author-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid grey;
+}
+
+.author-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+.category-container {
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.category-item {
+    position: relative; /* Ensure positioning context */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    width: 100%; /* Ensure the item takes full width */
+}
+
+.category-item img {
+    object-fit: cover;
+    width: 100%; /* Make the image take full width */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.category-item .more {
+    position: absolute;
+    bottom: 10px; /* Adjust as per your design */
+    left: 20px; /* Align to the left */
+    font-size: 35px;
+    font-weight: bold;
+    color: #e3fdf8; /* Text color */
+    padding: 5px 10px; /* Padding for text */
+}
+.category-item .more {
+    position: absolute;
+    bottom: 10px; /* Adjust as per your design */
+    left: 200px; /* Align to the left */
+    bottom: 110px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #e3fdf8; /* Text color */
+    padding: 5px 10px; /* Padding for text */
+}
+
+@media (max-width: 768px) {
+    .category-item img {
+        height: auto; /* Adjust height to be responsive */
+    }
+
+    .category-item .more {
+        font-size: 25px; /* Adjust font size for smaller screens */
+        bottom: 20px; /* Adjust position for smaller screens */
+        left: 10px; /* Adjust position for smaller screens */
+    }
+}
+
+
+/*  */
+
+</style>
+
+<div class="category-container">
+    <div class="category-item">
+        <img src="https://www.svalgo.com/img/banner1.jpg" alt="Banner Image">
+        <div class="more">About Us
+            <span class="more_lan"></span>
+        </div>
+    </div>
+</div>
+
+<div class="services-heading">
+    <h5>SERVICES</h5>
+</div>
+<section class="about-us">
+    <div class="container">
+        <h1 style="font-weight: 800;">Who We Are</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Whether It’s a huge idea or a small plan to get your work off the ledge, joytilingtechnology IT Solution come across the soul of your business; recognizing your target audience, who your product or service speaks to and turn this into a visible campaign. This ensures maximum impression on your advertising as well as fantastic ROI. <br>
+
+                    We, joytilingtechnology IT Solution provides innovative solutions that empower all stakeholders across India to deliver world-class automotive solutions that helps vendors to reduce labor and processing cost with defined and exact data/records. It helps to monitor or calculate the business transactions. <br>
+                    <br>
+                    We, joytilingtechnology IT Solution is an innovative organization dedicated to Software development and IT Services. Our clients comprise from the stream of SSI, SOHO, small-large business, education, hospitals, hotels etc. We provide complete IT solution through our expertise and highly qualified team of consultants.
+                    <br>
+                    We, joytilingtechnology IT Solution think about our clients first. We love nothing more that working on a great project with a fantastic client. We care about our clients and can often be found working out of hours to get everything “Just Right”.</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 20px; background-color:  #76D7C4; color: black; margin-bottom: 20px;"> Know More About Us</a>
+            </div>
+            <div class="col-md-6"> 
+                <img src="https://www.svalgo.com/img/about.jpg" alt="About Us Image"> 
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!--  -->
+
+    <div class="testimonials-section">
+        <h2>Clients Feedbacks</h2>
+        <div class="testimonials-wrapper">
+            <div class="testimonials-container" id="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>“joytilingtechnology maintains transparent communication throughout the digital marketing process. Regular reports detailing campaign performance, key metrics, and future recommendations are provided, ensuring that we are always informed and can make strategic decisions based on real-time data.”</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://www.svalgo.com/img/user.png" alt="Profile Icon">
+                            </div>
+                            <div class="author-name">Ranjeet Singh</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>“joytilingtechnology maintains transparent communication throughout the digital marketing process. Regular reports detailing campaign performance, key metrics, and future recommendations are provided, ensuring that we are always informed and can make strategic decisions based on real-time data.”</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://www.svalgo.com/img/user.png" alt="Profile Icon">
+                            </div>
+                            <div class="author-name">Amit sharma</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>“One of the standout qualities of joytilingtechnology is their commitment to user-centric design. The websites they create are not only beautiful but also incredibly intuitive, providing an exceptional user experience. Navigation is seamless, and interactive elements are strategically placed for maximum user engagement.”</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://www.svalgo.com/img/user.png" alt="Profile Icon">
+                            </div>
+                            <div class="author-name">Rashmi Khushawah</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('testimonials-container');
+    container.innerHTML += container.innerHTML; // Duplicate testimonials for seamless loop
+});
+</script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="scripts.js"></script> -->
+{% include 'footer.html' %}
+
+   

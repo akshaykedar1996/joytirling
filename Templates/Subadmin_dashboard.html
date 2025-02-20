@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    background-color: rgb(5, 163, 163);
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+    color: #fff;
+    font-weight: bold;
+    /* transition: background-color 0.3s, color 0.3s; */
+}
+
+.sidebar .nav-link.active {
+    background-color: #fff;
+    border-radius: 5px;
+    color: rgb(5, 163, 163);
+}
+
+.sidebar .nav-link:hover {
+    background-color: #fff;
+    color: rgb(5, 163, 163);
+}
+
+.sidebar .nav-link:hover i {
+    color: rgb(5, 163, 163);
+}
+
+.nav-link i {
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.header {
+    /* background-color: #ccffcc; */
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard h2 {
+    color: red;
+}
+
+.dashboard h3 {
+   border-top: 1px solid rgb(5, 163, 163);
+    border-bottom: 1px solid rgb(5, 163, 163);
+    color: black;
+    text-align: center;
+    padding: 7px;
+    font-weight: 600;
+}
+
+.card {
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    opacity: 0.95;
+}
+
+.card-body {
+    text-align: center;
+    /* border-radius: 20px;  */
+}
+
+.card-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@400&display=swap');
+
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo {
+    font-family: 'Arial', sans-serif;
+   
+    background-color: #f4f4f9; /* Light background for contrast */
+    text-align: center;
+    padding: 5px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s, box-shadow 0.3s; */
+ 
+}
+
+.logo h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: rgb(5, 163, 163);
+    margin: 0;
+    padding: 0;
+}
+
+.logo p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #333;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logo:hover {
+    /* transform: translateY(-5px); */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  
+}
+.navbar-brand {
+            font-family:  sans-serif;
+            color: white !important;
+            font-size: 25px;
+            font-weight: bold;
+            /* border: 2px solid #fff; */
+            margin-bottom: 10px;
+            
+        }
+        .navbar-brand img {
+            width: 70px;
+            height: 40px;
+            object-fit: contain;
+        }
+@media (max-width: 768px) {
+    .logo {
+
+    padding: 2px 20px;
+
+ 
+}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@400&display=swap');
+
+.navbar-brand-custom {
+    font-family: 'Arial', sans-serif;
+    background-color: black; /* Background for contrast */
+    text-align: center; /* Center the text */
+    padding: 4px 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Ensures the entire block is treated as one unit */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar-brand-custom .line1, 
+.navbar-brand-custom .line2 {
+    display: block; /* Force each line to be on its own row */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand-custom .line1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px; 
+    color: rgb(24, 243, 214);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.navbar-brand-custom .line2 {
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 sidebar">
+                <!-- <a class="navbar-brand" href="/Subadmin_panel/dashboard/">
+                        
+        <img src="https://seupload.com/cache/plugins/filepreviewer/128600/6104f5f4cd162b5f3049013a111afcbe0efd8d756caaefd9c46a8476066e10c5/1100x800_cropped.jpg" style=" width: 160px;
+        height: 60px;
+        object-fit: contain;"  alt="Kedar Technology Logo"> 
+                </a> -->
+                <!-- <a class="navbar-brand-custom" href="/Subadmin_panel/dashboard/" style=" font-size: 22px; font-weight: bold; text-decoration: none; color: rgb(2, 201, 174); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                    joytilingtechnology
+                </a>
+                 -->
+
+                 <a class="navbar-brand-custom" href="/Subadmin_panel/dashboard/" style="text-decoration: none; ">
+                    <span class="line1">joytiling </span>
+                    <span class="line2">technology</span>
+                </a>
+                
+                <ul class="nav flex-column">
+                    <li class="nav-item" style="margin-top: 30px;">
+                        <a class="nav-link active" href="/Subadmin_panel/dashboard/"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                  
+                   
+                    <br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Subadmin_panel/add_services/">
+                           Add Service
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Subadmin_panel/all_Services/">
+                          </i> All Service
+                        </a>
+                    </li>
+                 
+                 
+                    
+                 
+                </ul>
+            </div>
+            <div class="col-md-10 main-content">
+                <div class="header">
+                    <h2>Subadmin Dashboard </h2>
+                </div>
+                <div class="dashboard">
+                    
+                    <h3>Welcome  To Subadmin Dashboard</h3>
+                    <div class="row">
+                        <!-- <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                   <a href="/Subadmin_panel/all_Services/"> <h5 class="card-title">All Service</h5>
+                                   <hr>
+                                   <p>$333</p>
+                                </div></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

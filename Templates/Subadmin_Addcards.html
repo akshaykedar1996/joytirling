@@ -1,0 +1,100 @@
+<!-- admin_product_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Service</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    .registration-form {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #fff;
+    }
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+    .form-group {
+        flex: 0 0 48%;
+        margin: 1%;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .form-group label {
+        flex: 1;
+        margin-bottom: 0;
+        font-weight: bold;
+        opacity: 0.7;
+    }
+    .form-group .form-control, .form-group .form-check-input {
+        flex: 2;
+    }
+    .form-check {
+        display: flex;
+        align-items: center;
+    }
+    .form-check-label {
+        margin-left: 10px;
+        opacity: 0.7;
+    }
+    .btn-custom {
+background-color: rgb(5, 163, 163);
+color: white;
+border-radius: 5px;
+padding: 10px 20px;
+border: none;
+text-align: center;
+display: block; /* Ensure it takes full width by default */
+margin: 0 auto; /* Center align horizontally */
+width: 200px; /* Adjust width as needed */
+}
+</style>
+<body>
+ 
+
+    <div class="registration-form">
+        <h2 class="text-center">Addcards  Form</h2>
+        <p class="text-center">Please fill out the form below to Add Cards.</p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group half-width">
+                    {{ ServiceForm.title.label_tag }} {{ ServiceForm.title }}
+                </div>
+                <div class="form-group half-width">
+                    {{ ServiceForm.img1.label_tag }} {{ ServiceForm.img1 }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group half-width">
+                    {{ ServiceForm.img2.label_tag }} {{ ServiceForm.img2 }}
+                </div>
+                </div>
+              
+                <div class="form-row">
+                    <div class="form-group ">
+                        {{ ServiceForm.paragraph.label_tag }} {{ ServiceForm.paragraph }}
+                    </div>
+                    </div>
+                    
+                    
+            <div class="form-row">
+                {{ ServiceForm.description.label_tag }} {{ ServiceForm.description }}
+            </div>
+              <!-- Add more form rows as needed for the remaining fields -->
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-custom">Add Product</button>
+            </div>
+            </form> 
+</body>
+</html>

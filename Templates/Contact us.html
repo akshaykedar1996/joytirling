@@ -1,0 +1,150 @@
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+        .contact-info .card {
+            border: none;
+            background-color: #f8f9fa;
+            height: 150px;
+        }
+        .map-form {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+
+        }
+        .map-form .map {
+            flex: 1;
+            margin-right: 1rem;
+        }
+        .map-form .form {
+            flex: 1;
+            margin-left: 1rem;
+        }
+        /*  */
+        .messages-container {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .messages-container .message {
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 3px;
+        }
+
+        .message.success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #165825;
+        }
+
+        .message.error {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Contact Us</h1>
+        <div class="text-center mb-4">
+            <a href="#">Home</a> Contact
+        </div>
+        <div class="row contact-info text-center">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Address</h5>
+                        <p class="card-text">DANGE CHOWK  PUNE CITY MAHARASHTRA, india 411033</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Contact Number</h5>
+                        <p class="card-text"><a href="tel:+917898937180" style="text-decoration: none;">+91 9370995131</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Email Address</h5>
+                        <p class="card-text"><a href="mailto:contact@svalgo.com" style="text-decoration: none; font-size: 13px;">joytilingtechnology2050@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Website</h5>
+                       <p class="card-text"> <a href="#"  style="text-decoration: none;">joytilingtechnology.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-form">
+            <div class="map">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11634760.34530922!2d74.60075519999999!3d20.593684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a16bb3f15f4c8b3%3A0x28d356dfd13609b!2sIndia!5e0!3m2!1sen!2sus!4v1692289640609!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+         
+            <div class="form">
+                {% if messages %}
+                <div class="messages-container">
+                    <ul>
+                        {% for message in messages %}
+                            <li class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+                                {{ message }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" name="message" placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 30px;">Send Message</button>
+                </form>
+            </div>
+        </div>
+        </div>            
+
+  <br>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>
+{% include 'footer.html' %}
+
+
